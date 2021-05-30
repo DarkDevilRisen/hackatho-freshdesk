@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh Desk</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+        crossorigin="anonymous" />
+</head>
+
+<body class="bg-grey">
+    <div class="sidebar" style="position: fixed;">
+        <a class="active" href="#home"><img
+                src="https://symbols.getvecta.com/stencil_80/132_freshdesk-icon.b7ac201f42.png" alt=""></a>
+        <a href="dashboard.html"><i class=" fa fa-life-ring fa-2x text-light"></i></a>
+        <a href="ticket.html"><i class=" fa fa-ticket fa-2x text-light "></i></a>
+        <a href="contacts.html"><i class=" fa fa-address-book fa-2x text-light"></i></a>
+        <a href="solutions.html"><i class=" fa fa-book fa-2x text-light"></i></a>
+        <a href="chart.html"><i class=" fa fa-bar-chart fa-2x text-light "></i></a>
+        <a href="Settings.html"><i class=" fa fa-cog fa-2x text-light"></i></a>
+    </div>
+    <div class="container-fluid content">
+
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <h5>Tickets on hold</h5>
+            <div class="collapse navbar-collapse justify-content-end pr-5" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-light text-dark" href="#"><b>Get Started (25%)</b></a>
+                    </li>
+                    <li class="nav-item dropdown">
+
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-light">Action</button>
+                            <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="">New Ticket</a>
+                                <a class="dropdown-item" href="#">New Email</a>
+                                <a class="dropdown-item" href="#">New Contact</a>
+                                <a class="dropdown-item" href="#">New Company</a>
+
+                            </div>
+                    </li>
+                    <li class="nav-item">
+                        <form class="form-inline my-2 my-lg-0">
+                            <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+
+                        </form>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fa fa-bell fa-2x " href="#"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fa fa-gift fa-2x " href="#"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fa fa-sticky-note-o fa-2x " href="#"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-warning " href="#">L</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <form action="" class="pl-1 collapse navbar-collapse justify-content-start form-group">
+                <input type="checkbox" name="sel" id="sel"> &ensp;
+                <div class="pl-1">Sort by:</div>&ensp;
+                <select name="data-center-dropdown" class="field-fix " style="opacity: 1;">
+                    <option value="duetime">Dueby time</option>
+                    <option value="lmodified">Last modified</option>
+                    <option value="dc" selected>Date Created</option>
+                    <option value="prior">priority</option>
+                    <option value="stat">Status</option> <hr>
+                    <option value="as">Ascending</option>
+                    <option value="ds">Descending</option>
+                </select>
+            </form>
+            <div class="collapse navbar-collapse justify-content-end pr-5" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+
+                    <li class="nav-item">
+                        <a class="nav-link text-grey" href="#">Layout:</a>
+                    </li>
+                    <li class="nav-item dropdown">
+
+                        <select name="data-center-dropdown" class="field-fix form-control" style="opacity: 1;">
+                            <option value="card">Card view</option>
+                            <option value="table" selected>Table View</option>
+                        </select>
+                    </li>
+                    <li>
+                        <button class="btn btn-dark"><</button>
+                        <button class="btn btn-dark">></button>
+                    </li>
+                    <li>
+                        <button class="btn btn-dark fa fa-floppy-o fa-lg"></button>
+                        
+                    </li>
+                    
+                </ul>
+            </div>
+        </nav>
+
+
+        <div class="row pl-5">
+           
+
+            <table class="table"><thead>
+                <tr>
+                    <th>
+                       
+                    </th>
+                    <th></th>
+                    <th colspan="1">
+                        Contact
+                    </th>
+                    <th>Subject</th>
+                    <th>state</th>
+                    <th>Group</th>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="sort" id="sort">
+                    </td>
+                    <td style="width: 5px;">
+                        <a href="javascript:;" class="avatar avatar-xs rounded-circle">
+                            <p style="background-color:  rgb(168, 228, 176);;" class="pl-2 pr-2 text-dark">M</p>
+                        </a>
+                    </td>
+                    <td>
+                        <p>Matt Rogers</p>
+                    </td>
+                    <td>	
+                        How can I get a refund for my order? #7
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-outline-success"><b>New</b></button>
+                    </td>
+                    <td>
+                        <select name="data-center-dropdown" class="field-fix form-control-sm" style="opacity: 1;">
+                            <option value="">--</option>
+                            <option value="">Account Managers </option>
+                            <option value="" selected> Billing</option>
+                            <option value="">Escalations</option>
+                            <option value="">Product Management</option> <hr>
+                            <option value="">QA</option>
+                            <option value="">Replacements</option>
+                            <option value="">Sales</option>
+                            <option value="">Shippind and Delivery</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="sort" id="sort">
+                    </td>
+                    <td style="width: 5px;">
+                        <a href="javascript:;" class="avatar avatar-xs rounded-circle">
+                            <p style="background-color: rgb(255, 185, 105);" class="pl-2 pr-2 text-dark">J</p>
+                        </a>
+                    </td>
+                    <td>
+                        <p>john</p>
+                    </td>
+                    <td>	
+                        How do I Place my custom order order? #7
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-outline-success"><b>New</b></button>
+                    </td>
+                    <td>
+                        <select name="data-center-dropdown" class="field-fix form-control-sm" style="opacity: 1;">
+                            <option value=""selected>--</option>
+                            <option value="">Account Managers </option>
+                            <option value="" > Billing</option>
+                            <option value="">Escalations</option>
+                            <option value="">Product Management</option> <hr>
+                            <option value="">QA</option>
+                            <option value="">Replacements</option>
+                            <option value="">Sales</option>
+                            <option value="">Shippind and Delivery</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="sort" id="sort">
+                    </td>
+                    <td style="width: 5px;">
+                        <a href="javascript:;" class="avatar avatar-xs rounded-circle">
+                            <p style="background-color:  rgb(189, 119, 235);;" class="pl-2 pr-2 text-dark">p</p>
+                        </a>
+                    </td>
+                    <td>
+                        <p>Polly </p>
+                    </td>
+                    <td>	
+                       	
+My return was not picked up #5
+                    </td>
+                    <td>
+                        
+                    </td>
+                    <td>
+                        <select name="data-center-dropdown" class="field-fix form-control-sm" style="opacity: 1;">
+                            <option value="">--</option>
+                            <option value="">Account Managers </option>
+                            <option value="" selected> Billing</option>
+                            <option value="">Escalations</option>
+                            <option value="">Product Management</option> <hr>
+                            <option value="">QA</option>
+                            <option value="">Replacements</option>
+                            <option value="">Sales</option>
+                            <option value="">Shippind and Delivery</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="sort" id="sort">
+                    </td>
+                    <td style="width: 5px;">
+                        <a href="javascript:;" class="avatar avatar-xs rounded-circle">
+                            <p style="background-color: hotpink;" class="pl-2 pr-2 text-dark">B</p>
+                        </a>
+                    </td>
+                    <td>
+                        <p>Bob Tree </p>
+                    </td>
+                    <td>	
+                        	
+How much time does it take to get my <br> money back!???? #4
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-outline-success"><b>New</b></button>
+                    </td>
+                    <td>
+                        <select name="data-center-dropdown" class="field-fix form-control-sm" style="opacity: 1;">
+                            <option value=""selected>--</option>
+                            <option value="">Account Managers </option>
+                            <option value="" > Billing</option>
+                            <option value="">Escalations</option>
+                            <option value="">Product Management</option> <hr>
+                            <option value="">QA</option>
+                            <option value="">Replacements</option>
+                            <option value="">Sales</option>
+                            <option value="">Shippind and Delivery</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="sort" id="sort">
+                    </td><td style="width: 5px;">
+                        <a href="javascript:;" class="avatar avatar-xs rounded-circle">
+                            <p style="background-color:  rgb(177, 177, 177);;" class="pl-2 pr-2 text-dark">M</p>
+                        </a>
+                    </td>
+                    <td>
+                        <p>Matt Rogers</p>
+                    </td>
+                    <td>	
+                       	
+Vintage table lamp - Out of stock? #3
+                    </td>
+                    <td>                    </td>
+                    <td>
+                        <select name="data-center-dropdown" class="field-fix form-control-sm" style="opacity: 1;">
+                            <option value=""selected>--</option>
+                            <option value="">Account Managers </option>
+                            <option value="" > Billing</option>
+                            <option value="">Escalations</option>
+                            <option value="">Product Management</option> <hr>
+                            <option value="">QA</option>
+                            <option value="">Replacements</option>
+                            <option value="">Sales</option>
+                            <option value="">Shippind and Delivery</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="sort" id="sort">
+                    </td><td style="width: 5px;">
+                        <a href="javascript:;" class="avatar avatar-xs rounded-circle">
+                            <p style="background-color: rgb(235, 226, 151);" class="pl-2 pr-2 text-dark">R</p>
+                        </a>
+                    </td>
+                    <td>
+                        <p>Rachel Doe</p>
+                    </td>
+                    <td>	
+                        Mary Jane shoes in Size 8? #2
+                    </td>
+                    <td>
+                        
+                    </td>
+                    <td>
+                        <select name="data-center-dropdown" class="field-fix form-control-sm" style="opacity: 1;">
+                            <option value=""selected>--</option>
+                            <option value="">Account Managers </option>
+                            <option value="" > Billing</option>
+                            <option value="">Escalations</option>
+                            <option value="">Product Management</option> <hr>
+                            <option value="">QA</option>
+                            <option value="">Replacements</option>
+                            <option value="">Sales</option>
+                            <option value="">Shippind and Delivery</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="sort" id="sort">
+                    </td><td style="width: 5px;">
+                        <a href="javascript:;" class="avatar avatar-xs rounded-circle">
+                            <p style="background-color:  rgb(168, 228, 176);;" class="pl-2 pr-2 text-dark">J</p>
+                        </a>
+                    </td>
+                    <td>
+                        <p>
+                            James Dean </p>
+                    </td>
+                    <td>	
+                        Payment failed? #1
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-outline-success"><b>New</b></button>
+                    </td>
+                    <td>
+                        <select name="data-center-dropdown" class="field-fix form-control-sm" style="opacity: 1;">
+                            <option value="">--</option>
+                            <option value="">Account Managers </option>
+                            <option value="" selected> Billing</option>
+                            <option value="">Escalations</option>
+                            <option value="">Product Management</option> <hr>
+                            <option value="">QA</option>
+                            <option value="">Replacements</option>
+                            <option value="">Sales</option>
+                            <option value="">Shippind and Delivery</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="sort" id="sort">
+                    </td><td style="width: 5px;">
+                        <a href="javascript:;" class="avatar avatar-xs rounded-circle">
+                            <p style="background-color: hotpink;" class="pl-2 pr-2 text-dark">P</p>
+                        </a>
+                    </td>
+                    <td>
+                        <p>
+                            Phileas Fogg</p>
+                    </td>
+                    <td>	
+                        	
+Adding a new payment method #11
+                    </td>
+                    <td>
+                        
+                    </td>
+                    <td>
+                        <select name="data-center-dropdown" class="field-fix form-control-sm" style="opacity: 1;">
+                            <option value=""selected>--</option>
+                            <option value="">Account Managers </option>
+                            <option value="" > Billing</option>
+                            <option value="">Escalations</option>
+                            <option value="">Product Management</option> <hr>
+                            <option value="">QA</option>
+                            <option value="">Replacements</option>
+                            <option value="">Sales</option>
+                            <option value="">Shippind and Delivery</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="sort" id="sort">
+                    </td><td style="width: 5px;">
+                        <a href="javascript:;" class="avatar avatar-xs rounded-circle">
+                            <p style="background-color: hotpink;" class="pl-2 pr-2 text-dark">c</p>
+                        </a>
+                    </td>
+                    <td>
+                        <p>
+                            Clarice Boone</p>
+                    </td>
+                    <td>	
+                        Email address change #10
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-outline-success"><b>New</b></button>
+                    </td>
+                    <td>
+                        <select name="data-center-dropdown" class="field-fix form-control-sm" style="opacity: 1;">
+                            <option value="">--</option>
+                            <option value=""selected>Account Managers </option>
+                            <option value="" > Billing</option>
+                            <option value="">Escalations</option>
+                            <option value="">Product Management</option> <hr>
+                            <option value="">QA</option>
+                            <option value="">Replacements</option>
+                            <option value="">Sales</option>
+                            <option value="">Shippind and Delivery</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="sort" id="sort">
+                    </td><td style="width: 5px;">
+                        <a href="javascript:;" class="avatar avatar-xs rounded-circle">
+                            <p style="background-color:  rgb(168, 228, 176);;" class="pl-2 pr-2 text-dark">M</p>
+                        </a>
+                    </td>
+                    <td>
+                        <p>Matt Rogers</p>
+                    </td>
+                    <td>	
+                        	
+Status of my replacement #9
+                    </td>
+                    <td>
+                        <small><button type="button" class="btn text-sm-center btn-outline-primary"><b>Customer responded</b></button></small>
+                    </td>
+                    <td>
+                        <select name="data-center-dropdown" class="field-fix form-control-sm" style="opacity: 1;">
+                            <option value="">--</option>
+                            <option value="">Account Managers </option>
+                            <option value="" > Billing</option>
+                            <option value="">Escalations</option>
+                            <option value="">Product Management</option> <hr>
+                            <option value="">QA</option>
+                            <option value=""selected>Replacements</option>
+                            <option value="">Sales</option>
+                            <option value="">Shippind and Delivery</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="sort" id="sort">
+                    </td><td style="width: 5px;">
+                        <a href="javascript:;" class="avatar avatar-xs rounded-circle">
+                            <p style="background-color: hotpink;" class="pl-2 pr-2 text-dark">A</p>
+                        </a>
+                    </td>
+                    <td>
+                        <p>Anne Richard</p>
+                    </td>
+                    <td>	
+                        Need to change my shipping address #8
+                    </td>
+                    <td>
+                        <small><button type="button" class="btn text-sm-center btn-outline-primary"><b>Customer responded</b></button></small>
+                    </td>
+                    <td>
+                        <select name="data-center-dropdown" class="field-fix form-control-sm" style="opacity: 1;">
+                            <option value="">--</option>
+                            <option value="">Account Managers </option>
+                            <option value="" > Billing</option>
+                            <option value="">Escalations</option>
+                            <option value="">Product Management</option> <hr>
+                            <option value="">QA</option>
+                            <option value="">Replacements</option>
+                            <option value="">Sales</option>
+                            <option value=""selected>Shippind and Delivery</option>
+                        </select>
+                    </td>
+                </tr>
+            </thead>
+
+            </table>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
